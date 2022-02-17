@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cup of Joe | Conversation Starters 💬</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Meow+Script&display=swap" rel="stylesheet">
+		<style>
+			body, html {
+				font-family: 'Josefin Sans', sans-serif;
+				height: 100%;
+				margin: 0;
+				width: 100%;
+			}
+			a {
+				font-weight: bold;
+			}
+			h1 {
+				color: #004f95;
+			}
+			#card {
+				align-items: center;
+				background-color: #ff4d26;
+				border-radius: 5px;
+				color: #ffffff;
+				display: flex;
+				font-size: 20px;
+				height: 270px;
+				justify-content: center;
+				line-height: 25px;
+				margin: 20px 0;
+				padding: 10px; width: 180px;
+				user-select: none;
+			}
+			.container {
+				align-items: center;
+				display: flex;
+				flex-flow: column;
+				justify-content: center;
+				text-align: center;
+				padding: 10px;
+			}
+			.grow {
+				transition: all .3s ease-in-out;
+			}
+			.grow:hover {
+				box-shadow: 0 6px 4px 6px rgba(0,0,0,0.1);
+				transform: scale(1.05);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Cup of Joe ☕💬</h1>
+			<p>Want to strike up a conversation with a Jumbonian but don't know how to start? Look no further!</p>
+			<div class="grow" id="card" onclick="shuffle()">
+				<p>Click here for a conversation starter!</p>
+			</div>
+			<p>Join <a href="#" target="_blank">#cup-of-joe</a> for monthly virtual coffees</p>
+		</div>
+	</body>
+	<script>
+		var prompts = [
+			"What's your spirit animal? 🐯",
+			"Pineapple on pizza - yes, no or heck yes? 🍍",
+			"Tell me your thoughts on coriander. Don't hold back. 🌿",
+			"Do you believe in Aliens? 👽",
+			"What have you worked on lately that excited you? 🔨",
+			"Do you play any instruments? 🎵",
+			"If you could time travel, when would you travel to? ⏰",
+			"What does your dream holiday look like? 🌴",
+			"What's your favourite meme? 😹",
+			"What is a weird food combination you really enjoy? 🍝",
+			"If you're in charge of music at a gathering, what do you play? 🎹"
+		];
+		function shuffle() {
+			var randomNumber = Math.floor((Math.random() * 10) + 1);
+			document.getElementById("card").innerHTML = prompts[randomNumber];
+		}
+	</script>
+</html>
